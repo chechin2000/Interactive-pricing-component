@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    .col-6, .col-12 {
+        grid-column: span 12;
+        text-align: center;
+        justify-content: center;
+    }
+
+    main {
+        min-width: 300px;
+        width: 80%;
+    }
+
+    .container-discount, .month-container, .yearly-container {
+        width: 100%;
+        text-align: center;
+    }
+}

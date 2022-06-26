@@ -1,0 +1,226 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: hsl(230, 100%, 99%);
+    background: url("../images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 20rem;
+}
+
+header{
+    height: 10rem;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    text-align: center;
+    background: url("../images/pattern-circles.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+header h1 {
+    color: #333;
+}
+
+header p {
+    color: hsl(225, 20%, 60%);
+    font-size: 1rem;
+}
+
+main {
+    width: 50%;
+    min-width: 550px;
+    display: grid;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 100%);
+    margin: 1rem auto;
+    grid-template-columns: repeat(12, minmax(1rem, 1fr));
+    grid-auto-rows: auto;
+    border-radius: 15px;
+}
+
+main div {
+    margin: 1.5rem 0;
+}
+
+.container-view, .month {
+    font-size: 1rem;
+    color: hsl(225, 20%, 60%);
+}
+
+.container-view, .container-price {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#price {
+    color: hsl(227, 35%, 25%);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+input[type='range'] {
+  display: block;
+  width: 100%;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  background:hsl(174, 86%, 45%);
+  background-image: url("../images/icon-slider.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 2.5rem;
+    height: 2.5rem;
+    background:hsl(174, 86%, 45%);
+    background-image: url("../images/icon-slider.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-top: -0.75rem;
+}
+
+input[type=range]::-ms-thumb {
+    width: 2.5rem;
+    height: 2.5rem;
+    background:hsl(174, 86%, 45%);
+    background-image: url("../images/icon-slider.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin-top: -0.75rem;
+}
+
+input[type=range]::-webkit-slider-thumb:hover{
+    box-shadow: 0rem 0.65rem 2rem hsl(174, 86%, 45%);
+    opacity: 0.5;
+}
+
+#range {
+    height: 0.6rem;
+    outline: none;
+    background: linear-gradient(90deg, rgba(16,213,193,0.5) 50%, hsl(224, 65%, 95%) 50%);
+}
+
+.lbl-switch {
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    background-color: #ccc;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-switch:after{
+    position: absolute;
+    content: "";
+    height: 1.40rem;
+    width: 1.40rem;
+    background-color: #fff;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    left: 0.5rem;
+    top: 12%;
+    transition: 0.3s;
+}
+
+#checkDiscount {
+    display: none;
+}
+
+#checkDiscount:checked~ .lbl-switch {
+    background: hsl(174, 86%, 45%);
+}
+
+#checkDiscount:checked~ .lbl-switch:after {
+    left: 2.15rem;
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-discount, .month-container, .yearly-container {
+    font-size: 1rem;
+    color: hsl(225, 20%, 60%);
+}
+
+.month-container {
+    width: 30%;
+    text-align: right;
+}
+
+.container-discount{
+    width: 20%;
+    text-align: center;
+}
+
+.yearly-container {
+    width: 50%;
+}
+
+.discount {
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 0.1rem;
+    margin-left: 0.5rem;
+}
+
+.divisor {
+    border: 0.35px solid #eee;
+    background-color: #eee;
+    width: calc(100% + 4rem);
+    margin: 0 -2rem;
+}
+
+.check-text{
+    display: inline-block;
+    margin: 0.40rem 0.25rem;
+    color: hsl(225, 20%, 60%);
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(227, 35%, 25%);
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.btn-container button:hover{
+    cursor: pointer;
+    box-shadow: 0px 1rem 1.5rem hsl(227, 35%, 25%);
+}
